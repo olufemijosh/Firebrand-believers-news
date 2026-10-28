@@ -18,3 +18,235 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #e0b3
   .article-image{min-height:175px}
   .article-body{padding:14px}
 }
+
+/* FIREBRAND BELIEVERS NEWS — editorial/news layout upgrade
+   CSS-only update: keeps the existing HTML, articles, logo and CMS workflow intact. */
+:root {
+  --accent: var(--gold, #d4a85c);
+}
+
+/* Keep the existing hero headline, but give the news section a stronger editorial rhythm. */
+.featured-section {
+  padding-top: 76px;
+  padding-bottom: 82px;
+}
+.section-heading {
+  align-items: end;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line, #e5e1d8);
+}
+.section-heading h2 {
+  font-size: clamp(32px, 4vw, 43px);
+  line-height: 1.1;
+}
+.section-heading .eyebrow {
+  margin-bottom: 10px;
+  color: #8b6b36;
+}
+.search-box {
+  border-radius: 4px;
+  min-height: 44px;
+  box-shadow: 0 3px 12px #172d2408;
+}
+.category-bar {
+  gap: 8px;
+  margin: 23px 0 28px;
+}
+.category {
+  border-radius: 999px;
+  padding: 9px 15px;
+  transition: background .2s, color .2s, border-color .2s;
+}
+
+/* Magazine-style lead story, followed by a clean news grid. */
+.article-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+.article-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e7e2d8;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px #172d2408;
+}
+.article-card:first-child {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  min-height: 310px;
+  background: #fff;
+}
+.article-card:first-child .article-image {
+  height: 100%;
+  min-height: 310px;
+}
+.article-card:first-child .article-body {
+  justify-content: center;
+  padding: clamp(22px, 3vw, 34px);
+}
+.article-card:first-child .article-category {
+  display: inline-flex;
+  align-items: center;
+  background: #f5eddd;
+  border-radius: 3px;
+  padding: 4px 8px;
+  color: #795925;
+}
+.article-card:first-child h3 {
+  font-size: clamp(25px, 2.5vw, 32px);
+  line-height: 1.18;
+  margin: 15px 0 12px;
+}
+.article-card:first-child p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+.article-card:not(:first-child) .article-image {
+  height: 190px;
+}
+.article-body {
+  padding: 21px 21px 22px;
+}
+.article-meta {
+  gap: 8px;
+  line-height: 1.5;
+}
+.article-card h3 {
+  font-size: 21px;
+  line-height: 1.28;
+  letter-spacing: -.015em;
+}
+.article-card p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.article-actions {
+  border-top: 1px solid #f0ede6;
+  padding-top: 14px;
+  margin-top: 4px;
+}
+.read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+}
+.read-link span {
+  transition: transform .2s;
+}
+.read-link:hover span {
+  transform: translateX(3px);
+}
+.share-link {
+  font-size: 11px;
+}
+.empty-state {
+  background: #fff;
+  border: 1px dashed #d8d2c7;
+  border-radius: 8px;
+}
+.load-row {
+  margin-top: 38px;
+}
+.button-outline {
+  border-radius: 4px;
+  padding: 13px 20px;
+  font-size: 12px;
+}
+
+/* Supporting sections feel connected to the same publication. */
+.newsletter {
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid var(--gold, #d4a85c);
+}
+.newsletter-inner {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.newsletter h2 {
+  font-size: clamp(27px, 3vw, 35px);
+}
+.about-section {
+  max-width: 900px;
+}
+.about-icon {
+  border-radius: 50%;
+}
+.site-footer {
+  border-top: 1px solid #ffffff18;
+}
+
+@media (min-width: 761px) {
+  .article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 34px #172d2417;
+    border-color: #d8c9a8;
+  }
+}
+
+@media (max-width: 760px) {
+  .featured-section {
+    padding-top: 48px;
+    padding-bottom: 55px;
+  }
+  .section-heading {
+    gap: 17px;
+    padding-bottom: 18px;
+  }
+  .section-heading h2 {
+    font-size: 32px;
+  }
+  .category-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 2px 1px 8px;
+    margin: 19px 0 20px;
+    scrollbar-width: thin;
+  }
+  .category {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  .article-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+  .article-card:first-child {
+    grid-column: auto;
+    display: flex;
+    min-height: 0;
+  }
+  .article-card:first-child .article-image,
+  .article-card:not(:first-child) .article-image {
+    height: 215px;
+    min-height: 0;
+  }
+  .article-card:first-child .article-body {
+    padding: 20px;
+  }
+  .article-card:first-child h3 {
+    font-size: 25px;
+  }
+  .article-body {
+    padding: 18px;
+  }
+  .article-card h3 {
+    font-size: 21px;
+  }
+  .newsletter {
+    padding: 37px 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .article-card:first-child .article-image,
+  .article-card:not(:first-child) .article-image {
+    height: 185px;
+  }
+  .article-card:first-child h3 {
+    font-size: 23px;
+  }
+}
