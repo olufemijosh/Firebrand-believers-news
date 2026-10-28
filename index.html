@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Firebrand Believers News — Christian news, faith, culture, biblical reflections and stories from around the world.">
+  <meta name="theme-color" content="#142b24">
+  <title>Firebrand Believers News | Faith. Truth. Perspective.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topline"><div class="wrap top-inner"><span>FAITH • TRUTH • PERSPECTIVE</span><span id="today"></span></div></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#" aria-label="Firebrand Believers News home">
+        <span class="brand-mark">FB<span>N</span></span>
+        <span class="brand-copy"><strong>Firebrand Believers News</strong><small>Christian news &amp; articles</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav id="mainNav" aria-label="Main navigation">
+        <a href="#latest">Latest</a><a href="#categories">Categories</a><a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">A CHRISTIAN NEWS &amp; ARTICLES PLATFORM</p>
+          <h1>Faith that informs.<br><em>Truth that matters.</em></h1>
+          <p>Thoughtful Christian perspectives on faith, society, culture, and the stories shaping our world.</p>
+          <a class="button button-light" href="#latest">Explore the latest <span>↘</span></a>
+        </div>
+        <div class="hero-art" role="img" aria-label="Open Bible on a table in warm morning light">
+          <div class="hero-art-overlay"></div><div class="hero-quote">“Test everything;<br>hold fast what is good.”<small>1 Thessalonians 5:21</small></div>
+        </div>
+      </div>
+    </section>
+    <section class="wrap featured-section" id="latest">
+      <div class="section-heading"><div><p class="eyebrow">READ • REFLECT • RESPOND</p><h2>Latest articles</h2></div>
+        <div class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search articles..." aria-label="Search articles"></div>
+      </div>
+      <div class="category-bar" id="categories" aria-label="Filter by category">
+        <button class="category active" data-category="All">All stories</button>
+        <button class="category" data-category="Faith">Faith</button>
+        <button class="category" data-category="Christian Living">Christian Living</button>
+        <button class="category" data-category="News & Society">News &amp; Society</button>
+        <button class="category" data-category="Bible Study">Bible Study</button>
+      </div>
+      <div class="article-grid" id="articleGrid" aria-live="polite"></div>
+      <p class="empty-state" id="emptyState" hidden>No articles match your search. Try another phrase or category.</p>
+      <div class="load-row"><button class="button button-outline" id="showAllBtn">Show all articles</button></div>
+    </section>
+    <section class="newsletter">
+      <div class="wrap newsletter-inner">
+        <div><p class="eyebrow">STAY ROOTED &amp; INFORMED</p><h2>Good reading. Grounded faith.</h2><p>Visit regularly for new articles, biblical reflections, and Christian perspectives.</p></div>
+        <a class="button button-light" href="#latest">Browse articles <span>↗</span></a>
+      </div>
+    </section>
+    <section class="wrap about-section" id="about">
+      <div class="about-icon">✦</div><div><p class="eyebrow">ABOUT THIS BLOG</p><h2>Welcome to Firebrand Believers News.</h2><p>A space for Christian news, thoughtful commentary, biblical reflection, and conversations about faith in everyday life. Our aim is to encourage readers to think carefully, seek truth, and engage the world with conviction and compassion.</p><p class="small-note">Editorial note: Articles and sample stories on this starter website are demonstration content. Replace them with verified reporting and your own writing before publishing.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><a class="footer-brand" href="#">Firebrand Believers News</a><p>Faith. Truth. Perspective.</p><div class="social-links"><a id="facebookLink" href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a><a id="whatsappLink" href="https://www.whatsapp.com/" target="_blank" rel="noopener">WhatsApp</a><a href="https://pagescms.org/" target="_blank" rel="noopener">Editor login</a><a href="#latest">Back to top ↑</a></div><small>© <span id="year"></span> Firebrand Believers News. All rights reserved.</small></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
