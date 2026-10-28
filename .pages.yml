@@ -1,0 +1,64 @@
+
+media:
+  input: media/images
+  output: /media/images
+  rename: safe
+  categories: [image]
+  extensions: [jpg, jpeg, png, webp, gif]
+
+content:
+  - name: articles
+    label: Articles
+    type: collection
+    path: content/posts
+    filename: "{primary}.md"
+    view:
+      primary: title
+      fields: [category, date, published]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Headline
+        type: string
+        required: true
+      - name: category
+        label: Category
+        type: select
+        options:
+          values:
+            - Faith
+            - Christian Living
+            - News & Society
+            - Bible Study
+        required: true
+      - name: date
+        label: Publication date
+        type: date
+        required: true
+      - name: excerpt
+        label: Summary
+        type: text
+        required: true
+      - name: image
+        label: Featured image
+        type: image
+      - name: imageAlt
+        label: Image description
+        type: string
+      - name: published
+        label: Published on website
+        type: boolean
+        default: true
+      - name: body
+        label: Article body
+        type: rich-text
+        required: true
+
+settings:
+  content:
+    merge: true
+  media:
+    merge: true
